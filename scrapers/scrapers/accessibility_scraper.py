@@ -1,7 +1,5 @@
 from .base_scraper import BaseScraper
-from agency_dataaccessor import AgencyDataAccessor
-from .base_api_client import ApiClient
-from lighthouse import PageInsightsClient
+from ..lighthouse import PageInsightsClient
 
 class AccessibilityScraper(BaseScraper):
 

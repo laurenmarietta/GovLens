@@ -1,7 +1,7 @@
-import requests
+import logging, re, requests
+
 from bs4 import BeautifulSoup
 from .base_scraper import BaseScraper
-import re
 
 class SocialScraper(BaseScraper):
 

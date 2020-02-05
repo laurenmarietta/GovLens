@@ -36,6 +36,10 @@ Get the API key for accessing lighthouse from here: https://developers.google.co
 
 Put that key in GOOGLE_API_KEY environment variable.
 
+AWS Lambda Account
+~~~~~~~~~~~~~~~~~~
+To get access to the AWS Lambda server(s), talk to
+
 Running the Scrapers
 ====================
 ``scrape_handler.py`` is the entry point for scraping.
@@ -55,6 +59,6 @@ AWS Lambda
 Pushing it to AWS lambda:
 
 1. zip the ``scraper/`` folder.
-2. go to AWS lamba and upload the zipped folder: https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions
+2. go to [AWS Lambda](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions) and upload the zipped folder.
 3. test the lambda by using this json (??)
 4. confirm that there are no errors by looking at cloudwatch logs: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logStream:group=/aws/lambda/scrapers;streamFilter=typeLogStreamPrefix

@@ -1,6 +1,7 @@
+import logging
+
 from .base_scraper import BaseScraper
-from agency_dataaccessor import AgencyDataAccessor
-from lighthouse import PageInsightsClient
+from ..lighthouse import PageInsightsClient
 
 
 class SecurityScraper(BaseScraper):

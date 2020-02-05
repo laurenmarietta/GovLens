@@ -43,12 +43,15 @@ The project is currently in testing stages, as we work to both develop usable, a
 
 ## Installation instructions
 
+### Install Python
+
 Install python3 if you haven't installed it yet. 
 ```bash
 python3 --version
 ```
 If you do not see a version you will need to visit [Python](https://www.python.org/downloads/) or google how to install it for your operating system.  You want python3 as well as pip3.
 
+### Set-up and Fork GitHub Repo
 
 Create a developer account on Github if you don't have one: [Github](https://github.com/)
 
@@ -59,7 +62,9 @@ Clone your forked repository from the command line (this will create a GovLens d
 git clone https://github.com/--your-github-name--/GovLens.git
 ```
 
-Navigate to the base directory of the reposistory and prepare to install depedencies.
+Navigate to the base directory of the repository and prepare to install depedencies.
+
+### Set up virtual environment
 
 To start, it is recommend to create a
 [virtual environment](https://virtualenv.pypa.io/en/stable/userguide/). If you have not
@@ -71,12 +76,16 @@ virtualenv venv
 source venv/bin/activate
 ```
 
+### Install Python package dependencies
+
 Now install the dependencies with pip:
 
 ```bash
 # Install requirements.txt
 pip3 install -r requirements.txt
 ```
+
+### Update web app database
 
 After the dependencies have installed, we want to prepare the database.
 
@@ -96,6 +105,8 @@ python3 manage.py shell
 >>> fill_agency_objects()
 >>> exit()
 ```
+
+### Generate token for scrapers
 
 The following steps are needed in order to connect the api with the scrapers. If you do not wish to do that, then this may be skipped. We need to create a dummy user for the scraper to be able to access the api. The api is part of the Django projet. 
 Note: The scrapers live in an independent environment not neccessarily in the same server as the Django website. The scrapers read and write data to the website using api endpoints. 
@@ -120,5 +131,4 @@ python3 manage.py drf_create_token scraper
 ```
 Finally, the database is ready to go! We are now ready to run the server:
 
-Navigate in your browser to `http://127.0.0.1:8000/` and you should see a list of
-agencies.
+Navigate in your browser to `http://127.0.0.1:8000/`.
